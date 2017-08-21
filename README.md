@@ -1,10 +1,12 @@
 
 ## 特性
 
-- 基于 npm + webpack + [antd](https://github.com/antd) 的企业级开发框架。
+- 基于 Webpack + React + [Antd](https://github.com/antd) 的企业级开发框架。
 
 ## 运行
 ```
+安装最新版本 node npm
+
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install
 npm start
@@ -40,31 +42,14 @@ export default [{
         url: (payload) => '/api/user'
     }];
 ```
-
-### redux store 结构 保持一致
+### 调用 Action
 ```
-${NAME} = {
-    get: { //请求单条记录操作
-        data, loading, error
-    },
-    list: { //请求多条记录操作
-        data, loading, error
-    },
-    save: { //请求保存操作
-        data, loading, error
-    },
-    update: { //请求更新操作
-        data, loading, error
-    },
-    delete: { //请求删除操作
-        data, loading, error
-    }
-}
+ReactUti(this).action("User.save",user);  //创建
+ReactUti(this).action("User.update",user);  //更新
+ReactUti(this).action("User.delete",user);  //删除
+ReactUti(this).action("User.get",user);  //获取单条
+ReactUti(this).action("User.list",user);  //获取分页列表
 ```
-- data: 服务端返回的数值
-- loading: （true:请求中等待响应，false:已响应)，通常用于 页面 loading 的控制
-- error: 错误消息
-
 
 ## 打包代码到 /build 下
   npm build
