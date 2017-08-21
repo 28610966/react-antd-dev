@@ -7,10 +7,12 @@
 ```
 安装最新版本 node npm
 
+git clone https://github.com/28610966/react-antd-dev.git front
+cd front
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install
-npm start
-npm server
+npm start  //启动前端
+npm server  //启动服务端
 ```
 运行后端服务，提供简易mock数据
 - package.json的 proxy属性代表代理服务的url， 默认为 [http://localhost:8000](http://localhost:8000)
