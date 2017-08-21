@@ -13,7 +13,7 @@ npm install
 运行后端服务，提供简易mock数据
 - package.json的 proxy属性代表代理服务的url， 默认为 [http://localhost:8000](http://localhost:8000)
 
-##开发指南
+## 开发指南
 
 ### 创建action
 ./src/actions/User.js
@@ -39,7 +39,7 @@ export default [{
         method: "get",
         url: (payload) => '/api/user'
     }];
-
+```
 
 ### redux store 结构 保持一致
 ```
@@ -65,5 +65,5 @@ ${NAME} = {
 - loading: （true:请求中等待响应，false:已响应)，通常用于 页面 loading 的控制
 - error: 错误消息
 
-##npm build
+## npm build
 打包代码到 /build 下
