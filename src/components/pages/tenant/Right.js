@@ -16,7 +16,7 @@ import DynamicForm from '@/components/commons/dynamicForm';
 import {ReactUtil, I18nUtil, RegExUtil}  from '@/util';
 
 const {Table, Card, Row, Col, Button, Modal, Form, Icon, Spin, Alert, Menu, Dropdown} = Antd;
-const entityName = {name: I18nUtil.get('Right','权限')};
+const entityName = {name: I18nUtil.get('Right', '权限')};
 
 class Right extends Component {
 
@@ -30,12 +30,8 @@ class Right extends Component {
             selectedRows: null,
             filteredInfo: null,
             sortedInfo: null,
-            query: Map({
-                current: 1,
-                pageSize: 20
-            }),
-            Dict: Map({
-            }),
+            query: Map({}),
+            Dict: Map({}),
             Right: null
         }
     }
@@ -45,7 +41,7 @@ class Right extends Component {
     }
 
     loadGrid() {
-        ReactUtil(this).action("Right.list",this.state.query.toObject());
+        ReactUtil(this).action("Right.list", this.state.query.toObject());
         this.setState({selectedRows: null, message: null});
     }
 
@@ -58,8 +54,8 @@ class Right extends Component {
     componentWillReceiveProps(nextProps) {
         let reactUtil = ReactUtil(this);
 
-        if (reactUtil.diff(nextProps,'Right.get.data.id')) {
-            reactUtil.setState({ Right: _.get(nextProps, 'Right.get')});
+        if (reactUtil.diff(nextProps, 'Right.get.data.id')) {
+            reactUtil.setState({Right: _.get(nextProps, 'Right.get')});
         }
 
         ['save', 'update', 'delete'].forEach((op) => {
@@ -92,8 +88,8 @@ class Right extends Component {
     openNewModal = (flag) => {
         let e = {modalShow: flag};
         if (flag) {
-            Object.assign(e, { Right: null});
-        }else{
+            Object.assign(e, {Right: null});
+        } else {
             Object.assign(e, {view: false});
         }
         ReactUtil(this).setState(e);
@@ -102,11 +98,11 @@ class Right extends Component {
     handleOk() {
         this.refs.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
-                this.setState({ Right: {data: values}});
+                this.setState({Right: {data: values}});
                 if (_.get(values, 'id', null) === null) {
-                    ReactUtil(this).action("Right.save",values);
+                    ReactUtil(this).action("Right.save", values);
                 } else {
-                    ReactUtil(this).action("Right.update",values);
+                    ReactUtil(this).action("Right.update", values);
                 }
             }
         });
@@ -118,8 +114,8 @@ class Right extends Component {
                 dataIndex: 'name',
                 title: '权限名',
                 width: '10%',
-                 sorter: true,
-                 render: (v, e) => {
+                sorter: true,
+                render: (v, e) => {
                     let vv = v;
                     return vv;
                 }
@@ -128,8 +124,8 @@ class Right extends Component {
                 dataIndex: 'group',
                 title: '分组',
                 width: '10%',
-                 sorter: true,
-                 render: (v, e) => {
+                sorter: true,
+                render: (v, e) => {
                     let vv = v;
                     return vv;
                 }
@@ -138,8 +134,8 @@ class Right extends Component {
                 dataIndex: 'order',
                 title: '排序',
                 width: '10%',
-                 sorter: true,
-                 render: (v, e) => {
+                sorter: true,
+                render: (v, e) => {
                     let vv = v;
                     return vv;
                 }
@@ -167,16 +163,17 @@ class Right extends Component {
     }
 
     updateOne(e) {
-        ReactUtil(this).action("Right.get",e);
-        this.setState({view:false},this.openNewModal.bind(this,true));
+        ReactUtil(this).action("Right.get", e);
+        this.setState({view: false}, this.openNewModal.bind(this, true));
     }
+
     view(e) {
-        ReactUtil(this).action("Right.get",e);
-        this.setState({view:true},this.openNewModal.bind(this,true));
+        ReactUtil(this).action("Right.get", e);
+        this.setState({view: true}, this.openNewModal.bind(this, true));
     }
 
     deleteOne(e) {
-        ReactUtil(this).action("Right.delete",e);
+        ReactUtil(this).action("Right.delete", e);
     }
 
     deleteMore() {
@@ -187,7 +184,7 @@ class Right extends Component {
                 title: I18nUtil.get('are.you.sure'),
                 onOk: () => {
                     var ids = this.state.selectedRows.map(m => m.id).join(',');
-                     ReactUtil(this).action("Right.delete",{id: ids});
+                    ReactUtil(this).action("Right.delete", {id: ids});
                 }
             });
         }
@@ -209,14 +206,14 @@ class Right extends Component {
             || _.get(this.props, 'Right.save.loading', false)
             || _.get(this.props, 'Right.update.loading', false);
     }
-    
+
     handleTableChange = (pagination, filters, sorter) => {
         let query = this.state.query
             .set('current', pagination.current)
             .set('pageSize', pagination.pageSize)
-            .set('sortField',sorter.field)
+            .set('sortField', sorter.field)
             // .set('filters',filters)
-            .set('sortOrder',sorter.order);
+            .set('sortOrder', sorter.order);
         this.state.query = query;
         this.loadGrid();
     }
@@ -226,30 +223,30 @@ class Right extends Component {
         const data = _.get(this.state, 'Right', null);
         const loading = this.getLoading();
         const {view = false, modalShow} = this.state;
-        let title ='';
-        if(view){
+        let title = '';
+        if (view) {
             title = I18nUtil.get('modal.title.view', '', entityName);
-        }else if(_.get(data,'data.id',null) === null){
+        } else if (_.get(data, 'data.id', null) === null) {
             title = I18nUtil.get('modal.title.add', '', entityName);
-        }else {
+        } else {
             title = I18nUtil.get('modal.title.edit', '', entityName);
         }
 
         return (<Modal
-            style={{top: '20px',display: modalShow?'block':'none'}}
+            style={{top: '20px', display: modalShow ? 'block' : 'none'}}
             width={800}
             title={title}
             visible={modalShow}
             okText={I18nUtil.get('ok')}
-            onOk={!view ? this.handleOk.bind(this): this.openNewModal.bind(this, false)}
+            onOk={!view ? this.handleOk.bind(this) : this.openNewModal.bind(this, false)}
             cancelText={I18nUtil.get('cancel')}
             onCancel={this.openNewModal.bind(this, false)}>
             <Antd.Spin spinning={loading}>
                 <WrappedForm ref="form" dict={this.state.Dict}
-                             data={data} 
+                             data={data}
                              view={view}
                              submit={this.handleOk.bind(this)}
-                             ></WrappedForm>
+                ></WrappedForm>
             </Antd.Spin>
         </Modal>);
     }
@@ -283,20 +280,14 @@ class Right extends Component {
     renderTable() {
         let columns = this.buildColumn();
         const pageSize = this.state.query.get('pageSize');
-        const list = _.get(this.props, 'Right.list.data.list', null);
-        const total = _.get(this.props, 'Right.list.data.total', 0);
+        const list = _.get(this.props, 'Right.list.data', null);
         const loading = _.get(this.props, 'Right.list.loading', false);
         return (
             <div>
                 {this.renderTools()}
                 <Spin spinning={loading}>
                     <Table
-                        pagination={{
-                            pageSize: pageSize,
-                            showSizeChanger: true,
-                            showQuickJumper: true,
-                            total: total
-                        }}
+                        pagination={false}
                         bordered={true}
                         rowSelection={this.rowSelection}
                         columns={columns}
@@ -313,17 +304,20 @@ class Right extends Component {
             expand: false,
             prefix: '',
             forms: [
-                        {id: 'name', label: '权限名', type: 'input',
-                        },
-                        {id: 'group', label: '分组', type: 'input',
-                        },
-                        {id: 'order', label: '排序', type: 'number',
-                        },
+                {
+                    id: 'name', label: '权限名', type: 'input',
+                },
+                {
+                    id: 'group', label: '分组', type: 'input',
+                },
+                {
+                    id: 'order', label: '排序', type: 'number',
+                },
             ],
             loading: _.get(this.props, 'Right.list.loading', false),
             search: () => {
                 let condition = this.refs['qForm'].getCondition();
-                this.setState({query:this.state.query.merge(condition)},this.loadGrid);
+                this.setState({query: this.state.query.merge(condition)}, this.loadGrid);
             }
         }
         return (
@@ -333,7 +327,7 @@ class Right extends Component {
         )
     }
 
-    //主体渲染入口，不要在render里面修改state。
+//主体渲染入口，不要在render里面修改state。
     render() {
         return (
             <div>
@@ -343,10 +337,10 @@ class Right extends Component {
             </div>);
     }
 
-    //组件被卸载的时候调用。一般在componentDidMount里面注册的事件需要在这里删除。
-    //componentWillUnmount() {
+//组件被卸载的时候调用。一般在componentDidMount里面注册的事件需要在这里删除。
+//componentWillUnmount() {
 
-    //}
+//}
 }
 
 class RightForm extends Component {
@@ -366,14 +360,13 @@ class RightForm extends Component {
         const data = _.get(this.props, 'data.data', null);
         const loading = _.get(this.props, 'data.loading', false);
         const view = _.get(this.props, 'view', false);
-        
+
         const fields = [
             {
                 id: 'id',
                 label: '主键',
                 type: 'hidden',
-                rules: [
-                ],
+                rules: [],
             },
             {
                 id: 'name',
@@ -381,7 +374,7 @@ class RightForm extends Component {
                 type: 'input',
                 rules: [
                     {
-                    required:true, message: I18nUtil.get('please.input', {name: '权限名'}),
+                        required: true, message: I18nUtil.get('please.input', {name: '权限名'}),
                     },
                 ],
             },
@@ -391,7 +384,7 @@ class RightForm extends Component {
                 type: 'input',
                 rules: [
                     {
-                    required:true, message: I18nUtil.get('please.input', {name: '分组'}),
+                        required: true, message: I18nUtil.get('please.input', {name: '分组'}),
                     },
                 ],
             },
@@ -399,8 +392,7 @@ class RightForm extends Component {
                 id: 'order',
                 label: '排序',
                 type: 'number',
-                rules: [
-                ],
+                rules: [],
             },
         ]
         const props = {
