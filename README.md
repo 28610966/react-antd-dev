@@ -4,11 +4,12 @@
 - 基于 npm + webpack + [antd](https://github.com/antd) 的企业级开发框架。
 
 ## 运行
+```
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install
 npm start
 npm server
-
+```
 运行后端服务，提供简易mock数据
 - package.json的 proxy属性代表代理服务的url， 默认为 [http://localhost:8000](http://localhost:8000)
 
