@@ -12,8 +12,6 @@ npm install
 ## npm server
 运行后端服务，提供简易mock数据
 - package.json的 proxy属性代表代理服务的url， 默认为 [http://localhost:8000](http://localhost:8000)
-- 在 /mock 下创建目录 ${NAME}/get.json
-- 重启 npm server
 
 ##开发指南
 
