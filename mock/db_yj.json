@@ -888,66 +888,6 @@
       ],
       "group": "系统",
       "route": "actions"
-    },
-    {
-      "type": "Reducer",
-      "code": "/**\n *  auto create reducer\n *  author {{user}} date {{date}}\n */\nimport createReducer from '@/util/createReducer';\n\nconst handler = [\n    {\n        action:\"save{{NAME}}\",\n        key:\"save\"\n    },\n    {\n        action:\"update{{NAME}}\",\n        key:\"update\"\n    },\n    {\n        action:\"delete{{NAME}}\",\n        key:\"delete\"\n    },\n    {\n        action:\"get{{NAME}}\",\n        key:\"get\"\n    },\n    {\n        action:\"load{{NAME}}\",\n        key:\"list\"\n    }\n];\n\nexport default createReducer(handler);",
-      "id": 1502184293571,
-      "order": 3,
-      "description": null,
-      "lock": [
-        true
-      ],
-      "group": "系统",
-      "route": "reducers"
-    },
-    {
-      "type": "饼图",
-      "code": "/**\n *  auto create chart component\n *  author {{user}} date {{date}}\n */\n",
-      "id": 1502184322986,
-      "order": 5,
-      "description": null,
-      "lock": [
-        true
-      ],
-      "group": "界面-图表",
-      "route": "components/pages/charts/"
-    },
-    {
-      "type": "Saga",
-      "code": "/**\n *  auto create saga\n *  author {{user}} date {{date}}\n */\nexport default [\n    {\n        action: 'save{{NAME}}',\n        method: 'post',\n        url: (payload) => '/api/{{lname}}'\n    },\n    {\n        action: 'update{{NAME}}',\n        method: 'put',\n        url: (payload) => '/api/{{lname}}'\n    },\n    {\n        action: 'delete{{NAME}}',\n        method: 'delete',\n        url: (payload) => '/api/{{lname}}'\n    }, {   \n        action: 'get{{NAME}}',\n        method: 'get',\n        url: (payload) => `/api/{{lname}}/${payload.id}`\n    },\n    {   \n        action: 'load{{NAME}}',\n        method: 'get',\n        url: (payload) => '/api/{{lname}}'\n    },\n];",
-      "id": 1502184942515,
-      "order": 4,
-      "description": null,
-      "lock": [
-        true
-      ],
-      "group": "系统",
-      "route": "sagas"
-    },
-    {
-      "id": 1502267781407,
-      "type": "折线图",
-      "group": "界面-图表",
-      "order": 2,
-      "description": null,
-      "lock": [
-        true
-      ],
-      "code": "/**\n *  auto create chart component\n *  author {{user}} date {{date}}\n */",
-      "route": "components/pages/charts/"
-    },
-    {
-      "id": 1502267794136,
-      "type": "柱状图",
-      "group": "界面-图表",
-      "order": 3,
-      "description": null,
-      "lock": [
-        true
-      ],
-      "code": "/**\n *  auto create chart component\n *  author {{user}} date {{date}}\n */",
-      "route": "components/pages/charts/"
     }
   ],
   "ServerGroup": [
