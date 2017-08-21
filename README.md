@@ -44,11 +44,11 @@ export default [{
 ```
 ### 调用 Action
 ```
-ReactUti(this).action("User.save",user);  //创建
-ReactUti(this).action("User.update",user);  //更新
-ReactUti(this).action("User.delete",user);  //删除
-ReactUti(this).action("User.get",user);  //获取单条
-ReactUti(this).action("User.list",user);  //获取分页列表
+ReactUtil(this).action("User.save",user);  //创建
+ReactUtil(this).action("User.update",user);  //更新
+ReactUtil(this).action("User.delete",user);  //删除
+ReactUtil(this).action("User.get",user);  //获取单条
+ReactUtil(this).action("User.list",user);  //获取分页列表
 ```
 
 ## 打包代码到 /build 下
