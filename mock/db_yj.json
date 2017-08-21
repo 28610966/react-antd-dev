@@ -1,0 +1,1282 @@
+{
+  "App": [
+    {
+      "id": 1,
+      "appName": "预警中心",
+      "logo": "exclamation-circle"
+    }
+  ],
+  "Menu": [
+    {
+      "id": 1,
+      "title": "平台",
+      "icon": "desktop",
+      "path": "/desktop",
+      "role": "1",
+      "children": [
+        {
+          "id": 2,
+          "title": "租户管理",
+          "path": "/tenant_management"
+        },
+        {
+          "id": 3,
+          "title": "系统配置",
+          "path": "/system_config"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "租户",
+      "icon": "user",
+      "role": "2",
+      "children": [
+        {
+          "id": 5,
+          "title": "组织管理",
+          "path": "/org_management"
+        },
+        {
+          "id": 6,
+          "title": "人员管理",
+          "path": "/user_management"
+        },
+        {
+          "id": 7,
+          "title": "权限管理",
+          "path": "/right_management"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "配置",
+      "icon": "setting",
+      "group": "soft",
+      "role": "3",
+      "children": [
+        {
+          "id": 9,
+          "title": "服务管理",
+          "path": "/service_management"
+        },
+        {
+          "id": 10,
+          "title": "服务组管理",
+          "path": "/service_group_management"
+        },
+        {
+          "id": 11,
+          "title": "事件源管理",
+          "path": "/event_source_management"
+        },
+        {
+          "id": 12,
+          "title": "策略管理",
+          "path": "/strategy_management"
+        },
+        {
+          "id": 13,
+          "title": "排班管理",
+          "path": "/workforce_management"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "审计",
+      "group": "audit",
+      "role": "4",
+      "icon": "area-chart",
+      "children": [
+        {
+          "id": 15,
+          "title": "统计分析",
+          "path": "/service_group"
+        },
+        {
+          "id": 16,
+          "title": "操作审计",
+          "path": "/service"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "运维",
+      "group": "opt",
+      "role": "5",
+      "icon": "setting",
+      "children": [
+        {
+          "id": 18,
+          "title": "告警管理",
+          "path": "/alarm_management"
+        },
+        {
+          "id": 19,
+          "title": "事故管理",
+          "path": "/accident_management"
+        },
+        {
+          "id": 20,
+          "title": "事件管理",
+          "path": "/event_management"
+        },
+        {
+          "id": 21,
+          "title": "通知管理",
+          "path": "/notice_management"
+        },
+        {
+          "id": 13,
+          "title": "告警策略",
+          "path": "/alarm_strategy"
+        }
+      ]
+    }
+  ],
+  "Entitymanager": [
+    {
+      "id": 1502172221606,
+      "name": "Alarm",
+      "zh_name": "告警",
+      "route": "alarm"
+    },
+    {
+      "id": 1502172407153,
+      "name": "Accisdent",
+      "zh_name": "事故",
+      "route": "alarm"
+    },
+    {
+      "id": 1502247463052,
+      "name": "Event",
+      "zh_name": "事件",
+      "route": "event"
+    },
+    {
+      "id": 1502846949853,
+      "name": "Server",
+      "zh_name": "服务",
+      "route": "server"
+    },
+    {
+      "id": 1502847747530,
+      "name": "ServerGroup",
+      "zh_name": "服务组",
+      "route": "server"
+    },
+    {
+      "id": 1502873779137,
+      "name": "Org",
+      "zh_name": "组织",
+      "route": "tenant"
+    },
+    {
+      "id": 1502873786626,
+      "name": "User",
+      "zh_name": "人员",
+      "route": "user"
+    },
+    {
+      "id": 1502873794761,
+      "name": "Right",
+      "zh_name": "权限",
+      "route": "tenant"
+    },
+    {
+      "id": 1502874003604,
+      "name": "Role",
+      "zh_name": "角色",
+      "route": "tenant"
+    },
+    {
+      "id": 1502954607474,
+      "name": "Tenant",
+      "zh_name": "租户",
+      "route": "tenant"
+    },
+    {
+      "id": 1502963482813,
+      "name": "Dict",
+      "zh_name": "字典",
+      "route": "system"
+    },
+    {
+      "id": 1503039251372,
+      "name": "ExternalPage",
+      "zh_name": "外部页面",
+      "route": "system"
+    },
+    {
+      "id": 1503212101757,
+      "name": "Notice",
+      "zh_name": "通知",
+      "route": "notice"
+    }
+  ],
+  "Entityfield": [
+    {
+      "id": 1502172420060,
+      "entityId": 1502172221606,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "order": 1,
+      "required": []
+    },
+    {
+      "id": 1502172452790,
+      "entityId": 1502172221606,
+      "name": "level",
+      "zh_name": "级别",
+      "type": "select",
+      "order": 3,
+      "required": [],
+      "select_option": "Dict",
+      "select_option_id": "id",
+      "select_option_label": "name"
+    },
+    {
+      "id": 1502245263112,
+      "entityId": 1502172407153,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502245279103,
+      "entityId": 1502172407153,
+      "name": "name",
+      "zh_name": "事故名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502245293513,
+      "entityId": 1502172407153,
+      "name": "type",
+      "zh_name": "事故类型",
+      "type": "select",
+      "required": [],
+      "order": 3
+    },
+    {
+      "id": 1502247486742,
+      "entityId": 1502247463052,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502247501796,
+      "entityId": 1502247463052,
+      "name": "name",
+      "zh_name": "事件名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502247523934,
+      "entityId": 1502247463052,
+      "name": "date",
+      "zh_name": "发生时间",
+      "type": "datepicker",
+      "required": [
+        true
+      ],
+      "order": 3
+    },
+    {
+      "id": 1502247542974,
+      "entityId": 1502247463052,
+      "name": "source",
+      "zh_name": "事件源",
+      "type": "select",
+      "required": [],
+      "order": 4,
+      "select_option": "Dict",
+      "select_option_id": "id",
+      "select_option_label": "name"
+    },
+    {
+      "id": 1502247662761,
+      "entityId": 1502247463052,
+      "name": "handleUser",
+      "zh_name": "处理人",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 5
+    },
+    {
+      "id": 1502801653242,
+      "entityId": 1502172221606,
+      "name": "alarm_time",
+      "zh_name": "告警事件",
+      "type": "datepicker",
+      "required": null,
+      "order": 4
+    },
+    {
+      "id": 1502846963439,
+      "entityId": 1502846949853,
+      "name": "name",
+      "zh_name": "服务名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502846975215,
+      "entityId": 1502846949853,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502846997015,
+      "entityId": 1502846949853,
+      "name": "type",
+      "zh_name": "服务类型",
+      "type": "select",
+      "required": [
+        true
+      ],
+      "order": 3,
+      "select_option": "Dict",
+      "select_option_id": "id",
+      "select_option_label": "name"
+    },
+    {
+      "id": 1502847021472,
+      "entityId": 1502846949853,
+      "name": "group",
+      "zh_name": "服务组",
+      "type": "checkbox",
+      "required": null,
+      "order": 4,
+      "select_option": "ServerGroup",
+      "select_option_id": "id",
+      "select_option_label": "groupName",
+      "row": [
+        true
+      ]
+    },
+    {
+      "id": 1502847057546,
+      "entityId": 1502846949853,
+      "name": "create_user",
+      "zh_name": "创建人",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 5
+    },
+    {
+      "id": 1502847089381,
+      "entityId": 1502846949853,
+      "name": "create_time",
+      "zh_name": "创建时间",
+      "type": "datepicker",
+      "required": [
+        true
+      ],
+      "order": 6
+    },
+    {
+      "id": 1502847599438,
+      "entityId": 1502846949853,
+      "name": "description",
+      "zh_name": "服务说明",
+      "type": "textarea",
+      "required": null,
+      "order": 7,
+      "row": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null
+    },
+    {
+      "id": 1502847765243,
+      "entityId": 1502847747530,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": [],
+      "order": 1
+    },
+    {
+      "id": 1502847789797,
+      "entityId": 1502847747530,
+      "name": "groupName",
+      "zh_name": "组名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502866812348,
+      "entityId": 1502847747530,
+      "name": "order",
+      "zh_name": "排序",
+      "type": "number",
+      "required": null,
+      "order": 3
+    },
+    {
+      "id": 1502873871047,
+      "entityId": 1502873779137,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502873888712,
+      "entityId": 1502873779137,
+      "name": "name",
+      "zh_name": "组织名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502873902734,
+      "entityId": 1502873786626,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502873916609,
+      "entityId": 1502873786626,
+      "name": "name",
+      "zh_name": "姓名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502873948071,
+      "entityId": 1502873786626,
+      "name": "en_name",
+      "zh_name": "英文名",
+      "type": "input",
+      "required": null,
+      "order": 3
+    },
+    {
+      "id": 1502873970466,
+      "entityId": 1502873786626,
+      "name": "org_id",
+      "zh_name": "组织",
+      "type": "select",
+      "required": null,
+      "order": 4,
+      "select_option": "Org",
+      "select_option_id": "id",
+      "select_option_label": "name"
+    },
+    {
+      "id": 1502874013670,
+      "entityId": 1502874003604,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502874023542,
+      "entityId": 1502874003604,
+      "name": "name",
+      "zh_name": "角色名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502874051131,
+      "entityId": 1502874003604,
+      "name": "right",
+      "zh_name": "权限",
+      "type": "checkbox",
+      "required": null,
+      "order": 3,
+      "select_option": "Right",
+      "select_option_id": "id",
+      "select_option_label": "name"
+    },
+    {
+      "id": 1502874062894,
+      "entityId": 1502873794761,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502874075681,
+      "entityId": 1502873794761,
+      "name": "name",
+      "zh_name": "权限名",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502875137703,
+      "entityId": 1502873794761,
+      "name": "group",
+      "zh_name": "分组",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 3
+    },
+    {
+      "id": 1502875149155,
+      "entityId": 1502873794761,
+      "name": "order",
+      "zh_name": "排序",
+      "type": "number",
+      "required": null,
+      "order": 4
+    },
+    {
+      "id": 1502954620388,
+      "entityId": 1502954607474,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "order": 1
+    },
+    {
+      "id": 1502954633198,
+      "entityId": 1502954607474,
+      "name": "name",
+      "zh_name": "名称",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "order": 2
+    },
+    {
+      "id": 1502954812927,
+      "entityId": 1502954607474,
+      "name": "type",
+      "zh_name": "类别",
+      "type": "select",
+      "required": null,
+      "order": 3,
+      "select_option": "Dict",
+      "select_option_id": "id",
+      "select_option_label": "name"
+    },
+    {
+      "id": 1502957171114,
+      "entityId": 1502873786626,
+      "name": "right",
+      "zh_name": "角色",
+      "type": "checkbox",
+      "required": [
+        true
+      ],
+      "select_option": "Role",
+      "select_option_id": "id",
+      "select_option_label": "name",
+      "order": 6,
+      "row": [
+        true
+      ]
+    },
+    {
+      "id": 1502963500468,
+      "entityId": 1502963482813,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 1
+    },
+    {
+      "id": 1502963521333,
+      "entityId": 1502963482813,
+      "name": "name",
+      "zh_name": "名称",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 2
+    },
+    {
+      "id": 1502963570825,
+      "entityId": 1502963482813,
+      "name": "group",
+      "zh_name": "分组",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 3
+    },
+    {
+      "id": 1503039270704,
+      "entityId": 1503039251372,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 1
+    },
+    {
+      "id": 1503039286643,
+      "entityId": 1503039251372,
+      "name": "name",
+      "zh_name": "名称",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 2
+    },
+    {
+      "id": 1503039299551,
+      "entityId": 1503039251372,
+      "name": "url",
+      "zh_name": "地址",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 3
+    },
+    {
+      "id": 1503039513361,
+      "entityId": 1503039251372,
+      "name": "offsetLeft",
+      "zh_name": "左偏移量",
+      "type": "number",
+      "required": null,
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 4
+    },
+    {
+      "id": 1503039534720,
+      "entityId": 1503039251372,
+      "name": "offsetTop",
+      "zh_name": "上偏移量",
+      "type": "number",
+      "required": [],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 5,
+      "row": null
+    },
+    {
+      "id": 1503119708955,
+      "entityId": 1502873786626,
+      "name": "age",
+      "zh_name": "年龄",
+      "type": "number",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 5,
+      "row": null
+    },
+    {
+      "id": 1503212115496,
+      "entityId": 1503212101757,
+      "name": "id",
+      "zh_name": "主键",
+      "type": "hidden",
+      "required": null,
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 1
+    },
+    {
+      "id": 1503212134371,
+      "entityId": 1503212101757,
+      "name": "title",
+      "zh_name": "标题",
+      "type": "input",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 2
+    },
+    {
+      "id": 1503212178552,
+      "entityId": 1503212101757,
+      "name": "content",
+      "zh_name": "内容",
+      "type": "textarea",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 5,
+      "row": [
+        true
+      ]
+    },
+    {
+      "id": 1503212209310,
+      "entityId": 1503212101757,
+      "name": "notice_time",
+      "zh_name": "通知时间",
+      "type": "datepicker",
+      "required": [
+        true
+      ],
+      "select_option": null,
+      "select_option_id": null,
+      "select_option_label": null,
+      "order": 3
+    },
+    {
+      "id": 1503212254889,
+      "entityId": 1503212101757,
+      "name": "notice_area",
+      "zh_name": "通知范围",
+      "type": "checkbox",
+      "required": null,
+      "select_option": "Dict",
+      "select_option_id": "id",
+      "select_option_label": "name",
+      "order": 4,
+      "row": [
+        true
+      ]
+    }
+  ],
+  "Model": [],
+  "Strategy": [],
+  "NetworkDevices": [],
+  "Server": [
+    {
+      "name": "测试服务",
+      "id": 1502971522391,
+      "type": 1502963923774,
+      "group": [
+        1502848313894,
+        1502848319481,
+        1502866773254
+      ],
+      "create_user": "王斌",
+      "create_time": "2017-08-17T12:05:18.257Z",
+      "description": "测试"
+    }
+  ],
+  "AppSoft": [],
+  "SysSoft": [],
+  "Agent": [],
+  "Alarm": [
+    {
+      "id": 1502803293464,
+      "type": null,
+      "level": 1503041370040,
+      "alarm_time": "2017-08-05T13:21:45.400Z"
+    },
+    {
+      "id": 1502803297733,
+      "type": null,
+      "level": 1503041374834,
+      "alarm_time": "2017-08-11T13:21:35.038Z"
+    },
+    {
+      "id": 1503042830731,
+      "level": 1503041379890,
+      "alarm_time": "2017-08-12T07:53:48.151Z"
+    }
+  ],
+  "Accisdent": [],
+  "Event": [],
+  "I18n": [],
+  "ModuleEditor": [
+    {
+      "type": "Grid",
+      "code": "/**\n *  auto create grid component\n *  author {{user}} date {{date}}\n */\n\nimport React, {Component, PropTypes} from 'react';\nimport {connect} from 'react-redux';\nimport * as Antd from 'antd';\nimport moment from  'moment';\nimport _ from 'lodash';\nimport {Map} from 'immutable';\n\nimport DynamicQueryForm from '@/components/commons/dynamicQueryForm';\nimport DynamicForm from '@/components/commons/dynamicForm';\n\nimport {ReactUtil, I18nUtil, RegExUtil}  from '@/util';\n\nconst {Table, Card, Row, Col, Button, Modal, Form, Icon, Spin, Alert, Menu, Dropdown} = Antd;\nconst entityName = {name: I18nUtil.get('{{NAME}}','{{zh_name}}')};\n\nclass {{NAME}} extends Component {\n\n    static propTypes = {};\n\n    //构造函数，在创建组件的时候调用一次。\n    constructor(props) {\n        super(props);\n        this.state = {\n            modalShow: false,\n            selectedRows: null,\n            filteredInfo: null,\n            sortedInfo: null,\n            query: Map({\n                current: 1,\n                pageSize: 20\n            }),\n            Dict: Map({\n            {{#selectFields}}\n                {{this.select_option}}s : null,\n            {{/selectFields}}\n            }),\n            {{NAME}}: null\n        }\n    }\n\n    //在组件挂载之前调用一次。如果在这个函数里面调用setState，本次的render函数可以看到更新后的state，并且只渲染一次。\n    componentWillMount() {\n         {{#selectFields}}\n            ReactUtil(this).action(\"{{this.select_option}}.list\");\n        {{/selectFields}}\n    }\n\n    loadGrid() {\n        ReactUtil(this).action(\"{{NAME}}.list\",this.state.query.toObject());\n        this.setState({selectedRows: null, message: null});\n    }\n\n    //在组件挂载之后调用一次。这个时候，子主键也都挂载好了，可以在这里使用refs。\n    componentDidMount() {\n        this.loadGrid();\n    }\n\n    //props是父组件传递给子组件的。父组件发生render的时候子组件就会调用componentWillReceiveProps（不管props有没有更新，也不管父子组件之间有没有数据交换）。\n    componentWillReceiveProps(nextProps) {\n        let reactUtil = ReactUtil(this);\n\n        if (reactUtil.diff(nextProps,'{{NAME}}.get.data.id')) {\n            reactUtil.setState({ {{NAME}}: _.get(nextProps, '{{NAME}}.get')});\n        }\n        {{#selectFields}}\n        if (reactUtil.diff(nextProps,'{{this.select_option}}.list.data')) {\n            let {{this.select_option}}s = _.get(nextProps, '{{this.select_option}}.list.data');\n            reactUtil.setState({Dict: this.state.Dict.set(\"{{this.select_option}}s\", _.map({{this.select_option}}s, m => {\n                return {value: m.{{this.select_option_id}}, label: m.{{this.select_option_label}} };\n            }))});\n        }\n         {{/selectFields}}\n\n        ['save', 'update', 'delete'].forEach((op) => {\n            let dataId = `{{NAME}}.${op}.data`;\n            let errorId = `{{NAME}}.${op}.error`;\n            if (!_.isEqual(_.get(nextProps, dataId), _.get(this.props, dataId)) && _.get(nextProps, dataId, false)) {\n                Antd.message.success(I18nUtil.get(`${op}.success`, '', entityName));\n                this.openNewModal(false);\n                this.loadGrid();\n            } else if (_.get(nextProps, errorId, false) && !_.isEqual(_.get(nextProps, errorId), _.get(this.props, errorId))) {\n                Antd.message.error(_.get(nextProps, errorId));\n            }\n        });\n\n    }\n\n    //组件挂载之后，每次调用setState后都会调用shouldComponentUpdate判断是否需要重新渲染组件。默认返回true，需要重新render。在比较复杂的应用里，有一些数据的改变并不影响界面展示，可以在这里做判断，优化渲染效率。\n    shouldComponentUpdate(nextProps, nextState) {\n        if (_.get(nextProps, '{{NAME}}.list.data', null) === null) {\n            return false;\n        }\n        return true;\n    }\n\n    //除了首次render之后调用componentDidMount，其它render结束之后都是调用componentDidUpdate。\n    // componentDidUpdate() {\n    //\n    // }\n\n    openNewModal = (flag) => {\n        let e = {modalShow: flag};\n        if (flag) {\n            Object.assign(e, { {{NAME}}: null});\n        }else{\n            Object.assign(e, {view: false});\n        }\n        ReactUtil(this).setState(e);\n    }\n\n    handleOk() {\n        this.refs.form.validateFieldsAndScroll((err, values) => {\n            if (!err) {\n                this.setState({ {{NAME}}: {data: values}});\n                if (_.get(values, 'id', null) === null) {\n                    ReactUtil(this).action(\"{{NAME}}.save\",values);\n                } else {\n                    ReactUtil(this).action(\"{{NAME}}.update\",values);\n                }\n            }\n        });\n    }\n\n    buildColumn() {\n        let columns = [\n            {{#fields}}\n                {{#if_neq this.type 'hidden'}}\n            {\n                dataIndex: '{{name}}',\n                title: '{{zh_name}}',\n                width: '10%',\n                 sorter: true,\n                 render: (v, e) => {\n                    let vv = v;\n                    {{#if_indexOf 'select,radio,checkbox' this.type}} \n                       vv = _.chain(this.state.Dict.get(\"{{this.select_option}}s\")).filter(s => v === s.value || _.indexOf(v,s.value) > -1).map(t => t.label).join(\",\").value();\n                    {{/if_indexOf}}\n                    {{#if_eq this.type 'datepicker'}}\n                     vv = !!v ? moment(v).format(I18nUtil.get(\"format.date\")) : '';\n                    {{/if_eq}}\n                    return vv;\n                }\n            },\n                {{/if_neq}}\n            {{/fields}}\n            {\n                title: '',\n                dataIndex: 'id',\n                key: 'id',\n                render: (v, e) => {\n                    return (<div style=\\{{display: 'flex'}}>\n                        <a onClick={this.view.bind(this, e)}>{I18nUtil.get('button.text.view')}</a>\n                        <span className=\"separator\">|</span>\n                        <a onClick={this.updateOne.bind(this, e)}>{I18nUtil.get('button.text.edit')}</a>\n                        <span className=\"separator\">|</span>\n                        <Antd.Popconfirm title={I18nUtil.get('are.you.sure')} okText={I18nUtil.get('yes')}\n                                         cancelText={I18nUtil.get('no')}\n                                         onConfirm={this.deleteOne.bind(this, e)}>\n                            <a style=\\{{color: \"gray\"}}>{I18nUtil.get('button.text.delete')}</a>\n                        </Antd.Popconfirm>\n                    </div>)\n                }\n            },\n        ]\n        return columns;\n    }\n\n    updateOne(e) {\n        ReactUtil(this).action(\"{{NAME}}.get\",e);\n        this.setState({view:false},this.openNewModal.bind(this,true));\n    }\n    view(e) {\n        ReactUtil(this).action(\"{{NAME}}.get\",e);\n        this.setState({view:true},this.openNewModal.bind(this,true));\n    }\n\n    deleteOne(e) {\n        ReactUtil(this).action(\"{{NAME}}.delete\",e);\n    }\n\n    deleteMore() {\n        if (_.isNull(this.state.selectedRows) || _.isEmpty(this.state.selectedRows)) {\n            Antd.message.error(I18nUtil.get('no.data.selected'));\n        } else {\n            Modal.confirm({\n                title: I18nUtil.get('are.you.sure'),\n                onOk: () => {\n                    var ids = this.state.selectedRows.map(m => m.id).join(',');\n                     ReactUtil(this).action(\"{{NAME}}.delete\",{id: ids});\n                }\n            });\n        }\n    }\n\n    rowSelection = {\n        onChange: (selectedRowKeys, selectedRows) => {\n            if (selectedRows.length !== 0) {\n                this.setState({selectedRows: selectedRows, message: `选中了${selectedRows.length}条记录`});\n            } else {\n                this.setState({selectedRows: selectedRows, message: null});\n            }\n        },\n    };\n\n\n    getLoading() {\n        return _.get(this.props, '{{NAME}}.get.loading', false)\n            || _.get(this.props, '{{NAME}}.save.loading', false)\n            || _.get(this.props, '{{NAME}}.update.loading', false);\n    }\n    \n    handleTableChange = (pagination, filters, sorter) => {\n        let query = this.state.query\n            .set('current', pagination.current)\n            .set('pageSize', pagination.pageSize)\n            .set('sortField',sorter.field)\n            // .set('filters',filters)\n            .set('sortOrder',sorter.order);\n        this.state.query = query;\n        this.loadGrid();\n    }\n\n    renderNewModal() {\n        const WrappedForm = Form.create()({{NAME}}Form);\n        const data = _.get(this.state, '{{NAME}}', null);\n        const loading = this.getLoading();\n        const {view = false, modalShow} = this.state;\n        let title ='';\n        if(view){\n            title = I18nUtil.get('modal.title.view', '', entityName);\n        }else if(_.get(data,'data.id',null) === null){\n            title = I18nUtil.get('modal.title.add', '', entityName);\n        }else {\n            title = I18nUtil.get('modal.title.edit', '', entityName);\n        }\n\n        return (<Modal\n            style=\\{{top: '20px',display: modalShow?'block':'none'}}\n            width={800}\n            title={title}\n            visible={modalShow}\n            okText={I18nUtil.get('ok')}\n            onOk={!view ? this.handleOk.bind(this): this.openNewModal.bind(this, false)}\n            cancelText={I18nUtil.get('cancel')}\n            onCancel={this.openNewModal.bind(this, false)}>\n            <Antd.Spin spinning={loading}>\n                <WrappedForm ref=\"form\" dict={this.state.Dict}\n                             data={data} \n                             view={view}\n                             submit={this.handleOk.bind(this)}\n                             ></WrappedForm>\n            </Antd.Spin>\n        </Modal>);\n    }\n\n    renderTools() {\n        let menu = (\n            <Menu>\n                <Menu.Item key=\"menu_delete_more\">\n                    <a onClick={this.deleteMore.bind(this)}>{I18nUtil.get('button.text.delete.selected')}</a>\n                </Menu.Item>\n            </Menu>\n        );\n        return (\n            <div className=\"table-top-tools\">\n                <Row>\n                    <Col span={24}>\n                        <Button type=\"primary\"\n                                onClick={this.openNewModal.bind(this, true)}\n                                icon='plus'>{I18nUtil.get('button.text.new')}</Button>\n                        <Dropdown overlay={menu}>\n                            <Button>\n                                {I18nUtil.get('button.text.batch.operation')} <Icon type=\"down\"/>\n                            </Button>\n                        </Dropdown>\n                    </Col>\n                </Row>\n            </div>\n        );\n    }\n\n    renderTable() {\n        let columns = this.buildColumn();\n        const pageSize = this.state.query.get('pageSize');\n        const list = _.get(this.props, '{{NAME}}.list.data.list', null);\n        const total = _.get(this.props, '{{NAME}}.list.data.total', 0);\n        const loading = _.get(this.props, '{{NAME}}.list.loading', false);\n        return (\n            <div>\n                {this.renderTools()}\n                <Spin spinning={loading}>\n                    <Table\n                        pagination=\\{{\n                            pageSize: pageSize,\n                            showSizeChanger: true,\n                            showQuickJumper: true,\n                            total: total\n                        }}\n                        bordered={true}\n                        rowSelection={this.rowSelection}\n                        columns={columns}\n                        size=\"small\"\n                        dataSource={list}\n                        onChange={this.handleTableChange}\n                    ></Table>\n                </Spin>\n            </div>);\n    }\n\n    renderSearch() {\n        var props = {\n            expand: false,\n            prefix: '',\n            forms: [\n                 {{#fields}}\n                    {{#if_neq this.type 'hidden'}}\n                        {id: '{{this.name}}', label: '{{this.zh_name}}', type: '{{this.type}}',\n                        {{#if_eq this.type 'datepicker'}} \n                        span: 8, \n                        {{/if_eq}}\n                         {{#if_eq this.type 'textarea'}} \n                        span: 24, \n                        rows: 4,\n                        {{/if_eq}}\n                        {{#if_indexOf 'select,radio,checkbox' this.type}} \n                        option: this.state.Dict.get(\"{{this.select_option}}s\"), \n                        {{/if_indexOf}}\n                        },\n                    {{/if_neq}}\n                {{/fields}}\n            ],\n            loading: _.get(this.props, '{{NAME}}.list.loading', false),\n            search: () => {\n                let condition = this.refs['qForm'].getCondition();\n                this.setState({query:this.state.query.merge(condition)},this.loadGrid);\n            }\n        }\n        return (\n            <Card className=\"search-card\">\n                <DynamicQueryForm ref=\"qForm\" {...props}/>\n            </Card>\n        )\n    }\n\n    //主体渲染入口，不要在render里面修改state。\n    render() {\n        return (\n            <div>\n                {this.renderSearch()}\n                {this.renderTable()}\n                {this.renderNewModal()}\n            </div>);\n    }\n\n    //组件被卸载的时候调用。一般在componentDidMount里面注册的事件需要在这里删除。\n    //componentWillUnmount() {\n\n    //}\n}\n\nclass {{NAME}}Form extends Component {\n    static propTypes = {\n        submit: React.PropTypes.fun,\n        form: React.PropTypes.object.required,\n    }\n\n    constructor() {\n        super();\n    }\n\n    render() {\n        const {getFieldDecorator} = this.props.form;\n        const {submit} = this.props;\n        const dict = _.get(this.props, 'dict');\n        const data = _.get(this.props, 'data.data', null);\n        const loading = _.get(this.props, 'data.loading', false);\n        const view = _.get(this.props, 'view', false);\n        \n        const fields = [\n            {{#fields}}\n            {\n                id: '{{this.name}}',\n                label: '{{this.zh_name}}',\n                type: '{{this.type}}',\n                {{#if_eq 'textarea' this.type }}\n                rows: 4,\n                {{/if_eq}}\n                {{#if this.row}}\n                span: 24,\n                {{/if}}\n                {{#if_indexOf 'select,radio,checkbox' this.type }}\n                option: dict.get(\"{{this.select_option}}s\") , //字典\n                {{/if_indexOf}}\n                rules: [\n                {{#if this.required}}\n                    {\n                    required:true, message: I18nUtil.get('please.input', {name: '{{this.zh_name}}'}),\n                    },\n                {{/if}}\n                ],\n            },\n            {{/fields}}\n        ]\n        const props = {\n            fields: fields,\n            getFieldDecorator: getFieldDecorator,\n            submit: submit,\n            loading: loading,\n            view: view,\n            data: data,\n            span: 12,\n        }\n        return (\n            <DynamicForm {...props}/>\n        )\n    }\n\n}\n//redux store 属性 对接组件的 props 属性。\nfunction mapStoreToProps(store) {\n    return {\n        {{NAME}}: store.get('{{NAME}}'),\n        {{#selectFields}}\n        {{this.select_option}}: store.get('{{this.select_option}}'),\n        {{/selectFields}}\n    }\n}\n\nexport default connect(mapStoreToProps)({{NAME}});\n",
+      "id": 1502183942810,
+      "order": 1,
+      "description": "经典管理页面, 具有 增删改 条件查询 分页排序等功能\n",
+      "lock": [
+        true
+      ],
+      "group": "界面-管理",
+      "route": "components/pages"
+    },
+    {
+      "type": "Action",
+      "code": "/**\n * Created by ${user} on ${date}.\n */\n\nexport default [{\n        action: 'save',\n        method: 'post',\n        url: (payload) => `/api/{{lname}}`\n    }, {\n        action: 'update',\n        method: 'put',\n        url: (payload) => `/api/{{lname}}`\n    }, {\n        action: 'delete',\n        method: 'delete',\n        url: (payload) => `/api/{{lname}}`\n    }, {\n        action: 'get',\n        method: \"get\",\n        url: (payload) => `/api/{{lname}}/${payload.id}`\n    }, {\n        action: 'list',\n        method: \"get\",\n        url: (payload) => '/api/{{lname}}'\n    }];\n",
+      "id": 1502184189675,
+      "order": 1,
+      "description": null,
+      "lock": [
+        true
+      ],
+      "group": "系统",
+      "route": "actions"
+    },
+    {
+      "type": "Reducer",
+      "code": "/**\n *  auto create reducer\n *  author {{user}} date {{date}}\n */\nimport createReducer from '@/util/createReducer';\n\nconst handler = [\n    {\n        action:\"save{{NAME}}\",\n        key:\"save\"\n    },\n    {\n        action:\"update{{NAME}}\",\n        key:\"update\"\n    },\n    {\n        action:\"delete{{NAME}}\",\n        key:\"delete\"\n    },\n    {\n        action:\"get{{NAME}}\",\n        key:\"get\"\n    },\n    {\n        action:\"load{{NAME}}\",\n        key:\"list\"\n    }\n];\n\nexport default createReducer(handler);",
+      "id": 1502184293571,
+      "order": 3,
+      "description": null,
+      "lock": [
+        true
+      ],
+      "group": "系统",
+      "route": "reducers"
+    },
+    {
+      "type": "饼图",
+      "code": "/**\n *  auto create chart component\n *  author {{user}} date {{date}}\n */\n",
+      "id": 1502184322986,
+      "order": 5,
+      "description": null,
+      "lock": [
+        true
+      ],
+      "group": "界面-图表",
+      "route": "components/pages/charts/"
+    },
+    {
+      "type": "Saga",
+      "code": "/**\n *  auto create saga\n *  author {{user}} date {{date}}\n */\nexport default [\n    {\n        action: 'save{{NAME}}',\n        method: 'post',\n        url: (payload) => '/api/{{lname}}'\n    },\n    {\n        action: 'update{{NAME}}',\n        method: 'put',\n        url: (payload) => '/api/{{lname}}'\n    },\n    {\n        action: 'delete{{NAME}}',\n        method: 'delete',\n        url: (payload) => '/api/{{lname}}'\n    }, {   \n        action: 'get{{NAME}}',\n        method: 'get',\n        url: (payload) => `/api/{{lname}}/${payload.id}`\n    },\n    {   \n        action: 'load{{NAME}}',\n        method: 'get',\n        url: (payload) => '/api/{{lname}}'\n    },\n];",
+      "id": 1502184942515,
+      "order": 4,
+      "description": null,
+      "lock": [
+        true
+      ],
+      "group": "系统",
+      "route": "sagas"
+    },
+    {
+      "id": 1502267781407,
+      "type": "折线图",
+      "group": "界面-图表",
+      "order": 2,
+      "description": null,
+      "lock": [
+        true
+      ],
+      "code": "/**\n *  auto create chart component\n *  author {{user}} date {{date}}\n */",
+      "route": "components/pages/charts/"
+    },
+    {
+      "id": 1502267794136,
+      "type": "柱状图",
+      "group": "界面-图表",
+      "order": 3,
+      "description": null,
+      "lock": [
+        true
+      ],
+      "code": "/**\n *  auto create chart component\n *  author {{user}} date {{date}}\n */",
+      "route": "components/pages/charts/"
+    }
+  ],
+  "ServerGroup": [
+    {
+      "id": 1502848313894,
+      "groupName": "组一",
+      "order": 1
+    },
+    {
+      "id": 1502848319481,
+      "groupName": "组二",
+      "order": 2
+    },
+    {
+      "id": 1502866764553,
+      "groupName": "组三",
+      "order": 3
+    },
+    {
+      "id": 1502866768814,
+      "groupName": "组四",
+      "order": 4
+    },
+    {
+      "id": 1502866773254,
+      "groupName": "组五",
+      "order": 5
+    },
+    {
+      "id": 1502868147746,
+      "groupName": "组六",
+      "order": 6
+    }
+  ],
+  "Org": [
+    {
+      "id": 1502874277609,
+      "name": "开发部"
+    },
+    {
+      "id": 1502874292472,
+      "name": "测试部"
+    },
+    {
+      "id": 1502874297019,
+      "name": "产品部"
+    }
+  ],
+  "User": [
+    {
+      "id": 1502874285596,
+      "name": "王斌",
+      "en_name": "wangbin",
+      "org_id": 1502874277609,
+      "role_id": [
+        1502944305212,
+        1502944316439,
+        1502944344003,
+        1502944336382
+      ],
+      "right": [
+        1502944316439,
+        1502944294580,
+        1502944344003,
+        1502944336382,
+        1502944305212
+      ],
+      "age": 24
+    }
+  ],
+  "Right": [
+    {
+      "id": 1502875103911,
+      "name": "编辑用户",
+      "group": "租户",
+      "order": 1
+    },
+    {
+      "id": 1502875290480,
+      "name": "编辑组织",
+      "group": "租户",
+      "order": 2
+    },
+    {
+      "id": 1502875310857,
+      "name": "编辑权限",
+      "group": "租户",
+      "order": 3
+    },
+    {
+      "id": 1502945498677,
+      "name": "编辑服务",
+      "group": "配置",
+      "order": 4
+    },
+    {
+      "id": 1502945507471,
+      "name": "编辑服务组",
+      "group": "配置",
+      "order": 5
+    },
+    {
+      "id": 1502946113110,
+      "name": "编辑事件源",
+      "group": "配置",
+      "order": 6
+    },
+    {
+      "id": 1502946151150,
+      "name": "编辑策略",
+      "group": "配置",
+      "order": 7
+    },
+    {
+      "id": 1502946162262,
+      "name": "编辑排班",
+      "group": "配置",
+      "order": 8
+    },
+    {
+      "id": 1502946484225,
+      "name": "统计分析",
+      "group": "审计",
+      "order": 9
+    },
+    {
+      "id": 1502946495921,
+      "name": "操作审计",
+      "group": "审计",
+      "order": 10
+    },
+    {
+      "id": 1502946511355,
+      "name": "编辑告警",
+      "group": "运维",
+      "order": 11
+    },
+    {
+      "id": 1502946523554,
+      "name": "编辑事故",
+      "group": "运维",
+      "order": 12
+    },
+    {
+      "id": 1502946532928,
+      "name": "编辑事件",
+      "group": "运维",
+      "order": 13
+    },
+    {
+      "id": 1502946563591,
+      "name": "编辑通知",
+      "group": "管理",
+      "order": 14
+    },
+    {
+      "id": 1502946573277,
+      "name": "编辑告警策略",
+      "group": "管理",
+      "order": 15
+    },
+    {
+      "id": 1502946606873,
+      "name": "租户管理",
+      "group": "平台",
+      "order": 16
+    },
+    {
+      "id": 1502946621248,
+      "name": "系统配置",
+      "group": "平台",
+      "order": 17
+    }
+  ],
+  "Role": [
+    {
+      "id": 1502944294580,
+      "name": "平台管理员",
+      "right": [
+        1502946606873,
+        1502946621248
+      ]
+    },
+    {
+      "id": 1502944305212,
+      "name": "租户管理员",
+      "right": [
+        1502875290480,
+        1502875310857,
+        1502875103911
+      ]
+    },
+    {
+      "id": 1502944316439,
+      "name": "租户配置员",
+      "right": [
+        1502945507471,
+        1502946113110,
+        1502946151150,
+        1502946162262
+      ]
+    },
+    {
+      "id": 1502944336382,
+      "name": "租户审计员",
+      "right": [
+        1502946484225,
+        1502946495921
+      ]
+    },
+    {
+      "id": 1502944344003,
+      "name": "租户运维",
+      "right": [
+        1502946511355,
+        1502946523554,
+        1502946532928,
+        1502946563591,
+        1502946573277
+      ]
+    }
+  ],
+  "Tenant": [
+    {
+      "id": 1502970092240,
+      "name": "租户三",
+      "type": 1502969924694
+    }
+  ],
+  "Dict": [
+    {
+      "id": 1502963923774,
+      "name": "在线服务",
+      "group": "SERVER_TYPE"
+    },
+    {
+      "id": 1502963929165,
+      "name": "离线服务",
+      "group": "SERVER_TYPE"
+    },
+    {
+      "id": 1502969721143,
+      "name": "租户1",
+      "group": "TENANT_TYPE"
+    },
+    {
+      "id": 1502969919452,
+      "name": "租户2",
+      "group": "TENANT_TYPE"
+    },
+    {
+      "id": 1502969924694,
+      "name": "租户3",
+      "group": "TENANT_TYPE"
+    },
+    {
+      "id": 1503041370040,
+      "name": "一级",
+      "group": "ALARM_LEVEL"
+    },
+    {
+      "id": 1503041374834,
+      "name": "二级",
+      "group": "ALARM_LEVEL"
+    },
+    {
+      "id": 1503041379890,
+      "name": "三级",
+      "group": "ALARM_LEVEL"
+    },
+    {
+      "id": 1503041384688,
+      "name": "四级",
+      "group": "ALARM_LEVEL"
+    }
+  ],
+  "ExternalPage": [
+    {
+      "id": 1503039451085,
+      "name": "Kibana",
+      "url": "http://10.15.15.62:5601/app/kibana#/discover",
+      "offsetLeft": -184,
+      "offsetTop": 0,
+      "order": 2
+    },
+    {
+      "id": 1503039454956,
+      "name": "Grafana",
+      "url": "http://10.15.15.60:3002/dashboard/db/node-exporter-single-server?orgId=1",
+      "offsetLeft": 0,
+      "offsetTop": 0,
+      "order": 3
+    },
+    {
+      "id": 1503045156035,
+      "name": "淘宝",
+      "url": "http://www.taobao.com",
+      "offsetLeft": 0,
+      "offsetTop": 0,
+      "order": 4
+    },
+    {
+      "id": 1503045177501,
+      "name": "百度",
+      "url": "http://www.baidu.com",
+      "order": 5,
+      "offsetLeft": 0,
+      "offsetTop": 0
+    },
+    {
+      "id": 1503045216058,
+      "name": "Antd",
+      "url": "https://ant.design/docs/react/introduce-cn",
+      "offsetLeft": -50,
+      "offsetTop": 0,
+      "order": 1
+    }
+  ],
+  "Notice": [
+    {
+      "id": 1503284879925,
+      "title": "很多很多",
+      "notice_time": "2017-08-07T03:07:51.340Z",
+      "notice_area": [
+        1502969721143,
+        1502969919452,
+        1502963929165
+      ],
+      "content": "打得动\n"
+    }
+  ]
+}

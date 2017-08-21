@@ -1,0 +1,69 @@
+.box-sizing (@vars) {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.perspective (@vars) {
+  -webkit-perspective: @vars;
+  -moz-perspective: @vars;
+  perspective: @vars;
+}
+
+.perspective-origin (@vars) {
+  -webkit-perspective-origin: @vars;
+  -moz-perspective-origin: @vars;
+  perspective-origin: @vars;
+}
+
+.transform (@vars) {
+  -webkit-transform: @vars;
+  -moz-transform: @vars;
+  transform: @vars;
+}
+
+.transform-style (@vars) {
+  -webkit-transform-style: @vars;
+  -moz-transform-style: @vars;
+  transform-style: @vars;
+}
+
+.transition (@vars) {
+  -webkit-transition: -webkit-transform @vars;
+  -moz-transition: -moz-transform @vars;
+  transition: transform @vars;
+}
+
+.transition (@vars, @extra) {
+  -webkit-transition: -webkit-transform @vars, @extra;
+  -moz-transition: -moz-transform @vars, @extra;
+  transition: transform @vars, @extra;
+}
+
+.transform-origin (@vars) {
+  -webkit-transform-origin: @vars;
+  -moz-transform-origin: @vars;
+  transform-origin: @vars;
+}
+
+.user-select (@vars) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.border-radius(@vars) {
+  border-radius: @vars;
+  -o-border-radius: @vars;
+  -ms-border-radius: @vars;
+  -webkit-border-radius: @vars;
+  -moz-border-radius: @vars;
+}
+.animation(@vars){
+  animation: @vars;
+  -o-animation: @vars;
+  -ms-animation: @vars;
+  -webkit-animation: @vars;
+  -moz-animation: @vars;
+}

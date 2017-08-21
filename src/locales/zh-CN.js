@@ -1,0 +1,45 @@
+/**
+ * Created by binwang on 17/7/18.
+ */
+const zh_CN = {
+    'modal.title.add':"添加{name}",
+    'modal.title.edit':"编辑{name}",
+    'modal.title.view':"查看{name}",
+    'button.text.query':"查询",
+    'button.text.reset':"重置",
+    'button.text.unfold':"展开",
+    'button.text.fold':"收起",
+    'button.text.import':"导入",
+    'button.text.export':"导出",
+    'button.text.new':"添加",
+    'button.text.view':"查看",
+    'button.text.edit':"编辑",
+    'button.text.delete':"删除",
+    'button.text.more':"更多",
+    'button.text.batch.operation':"批量操作",
+    'button.text.delete.selected':"删除选中",
+    'update.success': "更新{name}成功！",
+    'update.fail': "更新{name}失败！",
+    'save.success': "保存{name}成功！",
+    'save.fail': "保存{name}失败！",
+    'delete.success': "删除{name}成功！",
+    'delete.fail': "删除{name}失败！",
+    'no.data.selected': '没有选中任何数据！',
+    'are.you.sure': "你确定吗？",
+    'please.input': "请输入{name}",
+    'please.select': "请选择{name}",
+    'alert.copy.clipboard': "复制{name}到剪贴板",
+    'yes': "是",
+    'no': "否",
+    'ok': "确定",
+    'cancel': "取消",
+    'logout': "注销",
+    'zh': "中文",
+    'en': "英文",
+    'format.date':"YYYY-MM-DD",
+    'format.time':"HH:mm:ss",
+    'format.date.time':"YYYY-MM-DD HH:mm:ss",
+}
+
+
+export default zh_CN;

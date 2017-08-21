@@ -1,0 +1,85 @@
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.ant-layout {
+  height: 100%;
+}
+
+.ant-layout-header {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: #108ee9;
+}
+
+.top-right-menu{
+  .ant-menu-submenu-horizontal:last-of-type > .ant-menu {
+    width: 120px;
+    left: -55px;
+  }
+}
+
+.logo {
+  font-size: 1.7em;
+  margin-left: 5px;
+  color: #ffffff;
+}
+
+.header {
+  color: @banner-font;
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 32px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+  margin-top: 2px;
+}
+
+.trigger:hover {
+  color: #108ee9;
+}
+
+.ant-card {
+  div.ant-card-body {
+    padding: 10px;
+  }
+}
+
+.search-card {
+  margin-left: 1px;
+  width: calc(~'100% - 2px');
+}
+
+.separator {
+  padding-left: 6px;
+  padding-right: 6px;
+  display: inline-block;
+  color: #e9e9e9;
+}
+
+.entity-manager, .module-manager{
+  li.ant-menu-item {
+    i {
+      float: right;
+      margin-top: 14px;
+    }
+  }
+}
+
+.ant-menu-item-selected {
+  //border-right: 3px solid #108ee9;
+}
+
+// right page css
+.table-top-tools {
+  margin: 10px 0px;
+  button.ant-btn {
+    margin-right: 5px;
+  }
+}
