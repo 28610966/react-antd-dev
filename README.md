@@ -4,7 +4,8 @@
 - 基于 npm + webpack + [antd](https://github.com/antd) 的企业级开发框架。
 
 ## 运行
-npm install
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cnpm install
 npm start
 npm server
 
