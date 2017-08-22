@@ -3,7 +3,6 @@ import './themes/style.less';
 import _ from 'lodash';
 import  {Frame} from './components/index';
 import {connect} from 'react-redux';
-import {AppAction} from './actions';
 import {ReactUtil} from '@/util';
 
 class App extends Component {

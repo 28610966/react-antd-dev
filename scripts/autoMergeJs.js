@@ -40,6 +40,7 @@ AutoMergeJs.prototype.apply = function (compiler) {
         }];
         createIndex('./src/actions', _targetFile);
         createIndex('./src/components/pages', _targetFile);
+        createIndex('./src/components/commons', _targetFile);
         callback();
     });
 };

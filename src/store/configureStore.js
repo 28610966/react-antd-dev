@@ -37,15 +37,24 @@ if (process.env.NODE_ENV === `development`) {
 
 const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 
-let ex_reducers = {};
-_.forEach(actions, action => _.assign(ex_reducers, {[action.name]: createReducer(action)}));
-_.assign(ex_reducers, {['Route']: Route});
 
-const _reducers = combineReducers(ex_reducers);
+function actionToReducer(actions){
+    let ex_reducers = {};
+    _.forEach(actions, action => _.assign(ex_reducers, {[action.name]: createReducer(action)}));
+    _.assign(ex_reducers, {['Route']: Route});
+    return combineReducers(ex_reducers);
+}
+
+
+function actionToSaga(actions){
+    return actions;
+}
+
 
 export default function configureStore(initialState = Map()) {
+    const _reducers = actionToReducer(actions);
     const store = createStoreWithMiddleware(_reducers, initialState);
-    let sagaboot = buildRoot(actions);
+    let sagaboot = buildRoot(actionToSaga(actions));
     sagaMiddleware.run(sagaboot);
     if (module.hot) {
         module.hot.accept('../actions', () => {

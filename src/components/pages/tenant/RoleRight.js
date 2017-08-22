@@ -2,7 +2,6 @@
  * Created by binwang on 17/8/16.
  */
 import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
 import {Tabs} from 'antd';
 import Right from './Right';
 import Role from './Role';

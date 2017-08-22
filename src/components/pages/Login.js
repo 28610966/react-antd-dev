@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import {connect} from 'react-redux';
-import pureRender from "pure-render-immutable-decorator";
 import {Form, Input, Button, Icon, Checkbox, Spin, message} from 'antd';
 import {Layout, Row, Col} from 'antd';
 import _ from 'lodash';
@@ -15,8 +14,6 @@ function hasErrors(fieldsError) {
     return Object.keys(fieldsError).some(field => fieldsError[field]);
 }
 
-
-@pureRender
 class Login extends React.Component {
     constructor(prop) {
         super(prop);

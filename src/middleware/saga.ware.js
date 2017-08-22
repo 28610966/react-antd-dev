@@ -52,7 +52,6 @@ function bodyHandler(data, type, method) {
 export function createSaga(item) {
     return function*() {
         let take = item.takeEvery ? takeEvery : takeLatest;
-        console.log(item.action);
         yield take(item.action, function*({payload}) {
             let result;
             NProgress.start();

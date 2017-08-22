@@ -2,7 +2,6 @@
  * Created by binwang on 17/8/21.
  */
 
-import createReducer from '@/util/createReducer';
 export default
     [{
         action: 'save',

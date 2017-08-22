@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {Menu, Dropdown, Icon, Layout, Breadcrumb, Row, Col, Badge, Tooltip, BackTop} from 'antd';
 import {Link} from 'react-router';
 import screenfull from 'screenfull';
-import pureRender from "pure-render-immutable-decorator";
 import ReactUtil from '../../util/ReactUtil';
 import LeftMenu from './LeftMenu';
 import Login from '../pages/Login';
@@ -18,7 +17,6 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const {Header, Sider, Content} = Layout;
 
-@pureRender
 class Frame extends React.Component {
 
     constructor() {

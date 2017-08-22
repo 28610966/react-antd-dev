@@ -6,7 +6,7 @@ export default (handler) => {
     return (state, action) => {
 
         const {payload = null, loading = true, result = null, error = null, type} = action;
-        if(type.indexOf(handler.name) == -1)
+        if (type.indexOf(handler.name) == -1)
             return {...state};
 
         let h = _.filter(handler.action, h1 => {
@@ -15,7 +15,7 @@ export default (handler) => {
         });
         if (h.length === 1) {
             let realKey = h[0].key || h[0].action;
-            if(!!realKey && realKey.indexOf('.') > 0)
+            if (!!realKey && realKey.indexOf('.') > 0)
                 realKey = realKey.split(".")[1];
             if (h[0].handler && h[0].handler instanceof Function) {
                 if (!!realKey) {

@@ -97,7 +97,6 @@ class User extends Component {
         if (_.get(nextProps, 'User.list.data', null) === null) {
             return false;
         }
-
         return true;
     }
 

@@ -3,11 +3,10 @@
  */
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import * as CodeEditorAction from '../../../actions/code/CodeEditor';
-import {ReactUtil, I18nUtil, RegExUtil}  from '../../../util';
+import {ReactUtil, I18nUtil}  from '../../../util';
 import {Map, is} from 'immutable';
 import _ from 'lodash';
-import MonacoEditor from 'react-monaco-editor';
+import MonacoEditor from 'react-monaco-editor/lib';
 import Welcome from '../../frame/welcome';
 import {Button, message,Spin} from 'antd';
 
@@ -99,6 +98,7 @@ class CodeEditor extends Component {
     renderMain(fileContent) {
         const options = {
             selectOnLineNumbers: true
+
         };
 
         let height = document.body.clientHeight - 150;

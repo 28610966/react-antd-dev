@@ -8,6 +8,8 @@ import moment from 'moment';
 import {LayoutUtil as FormLayout ,I18nUtil} from '../../util';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
+const Option = Antd.Select.Option;
+
 export default  class DynamicForm extends React.Component {
 
     static propTypes = {
@@ -90,6 +92,7 @@ export default  class DynamicForm extends React.Component {
                     <Antd.AutoComplete {...f} />
                 )
             ));
+
         } else if (type === 'number') {
             return this.createFormItem(f, (
                 getFieldDecorator(f.id, {

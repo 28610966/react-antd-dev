@@ -9,7 +9,7 @@ import {Map, List, is} from 'immutable';
 import {Steps, Checkbox, Transfer, Row, Col, Input, Select, Button, message, Progress, Icon} from 'antd';
 
 const Step = Steps.Step;
-const option = Select.Option;
+const Option = Select.Option;
 
 
 class CodeCreator extends Component {

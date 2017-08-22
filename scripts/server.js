@@ -9,17 +9,11 @@ const tables = [
     'ModuleEditor',
     'I18n',
     'App',
-
-    // 'User',
-    // 'User',
-    // 'BusinessDepartment',
-    // 'Dict',
-    // 'ServiceIntegration'
 ];
 let Handlebars = require('handlebars');
 let moment = require('moment');
 let express = require('express');
-let Mock = require('mockjs');
+// let Mock = require('mockjs');
 let fs = require('fs');
 let os = require('os');
 var bodyParser = require('body-parser');

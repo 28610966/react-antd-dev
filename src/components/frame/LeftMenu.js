@@ -16,7 +16,7 @@ class LeftMenu extends React.Component {
     }
 
     componentWillMount() {
-        ReactUtil(this).action('Menu.list',{current:1,pageSize:1000});
+        // ReactUtil(this).action('Menu.list',{current:1,pageSize:1000});
     }
 
     shouldComponentUpdate(nextProps){

@@ -1,5 +1,5 @@
 /**
- * Copyright @2016 www.wangbin.com
+ * Created by binwang on 2017/4/6.
  */
 
 import fetchApi from 'isomorphic-fetch';

@@ -1,6 +1,6 @@
 /**
  *  auto create grid component
- *  author binwang.local date 2017-08-21
+ *  author binwang.local date 2017-08-22
  */
 
 import React, {Component, PropTypes} from 'react';
@@ -336,7 +336,7 @@ class Alarm extends Component {
     //主体渲染入口，不要在render里面修改state。
     render() {
         return (
-            <div>
+            <div className="Alarm_container">
                 {this.renderSearch()}
                 {this.renderTable()}
                 {this.renderNewModal()}

@@ -51,6 +51,7 @@ class Tenant extends Component {
         this.setState({selectedRows: null, message: null});
     }
 
+
     //在组件挂载之后调用一次。这个时候，子主键也都挂载好了，可以在这里使用refs。
     componentDidMount() {
         this.loadGrid();

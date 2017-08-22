@@ -23,6 +23,3 @@ export default [{
         method: "get",
         url: (payload) => '/api/user'
     }];
-
-
-
