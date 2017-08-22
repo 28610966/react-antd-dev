@@ -20,8 +20,8 @@ class LeftMenu extends React.Component {
     }
 
     shouldComponentUpdate(nextProps){
-        if(_.get(nextProps,'Menu.list.data',null) === null)
-            return false;
+        // if(_.get(nextProps,'Menu.list.data',null) === null)
+        //     return false;
         return true;
     }
 
