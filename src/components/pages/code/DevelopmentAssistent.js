@@ -13,6 +13,7 @@ import CodeCreator from './CodeCreator';
 import RegularExpression from './RegularExpression';
 import Routes from './Routes';
 import I18n from './I18n';
+import SeconderyMenu from '../../frame/SeconderyMenu';
 import CodeManager from './CodeManager';
 
 const TabPane = Tabs.TabPane;
@@ -31,29 +32,26 @@ class DevelopmentAssistent extends Component {
 
     //主体渲染入口，不要在render里面修改state。
     render() {
-        const style = {height: '100%'};
-        const tabs = [{
-            name: '实体管理',
-            render: <EntityManager></EntityManager>
+        const data = [{
+            tab: '实体管理',
+            key:'tab_entity_manager',
+            component: <EntityManager></EntityManager>
         }, {
-            name: '代码生成',
-            render: <CodeCreator></CodeCreator>
+            tab: '代码生成',
+            key: 'tab_code_creator',
+            component: <CodeCreator></CodeCreator>
         }, {
-            name: '模板管理',
-            render: <Module></Module>
+            tab: '模板管理',
+            key:'tab_module',
+            component: <Module></Module>
         }, {
-            name: '代码管理',
-            render: <CodeManager></CodeManager>
+            tab: '代码管理',
+            key: 'tab_code_manager',
+            component: <CodeManager></CodeManager>
         },
-        //     {
-        //     name: '布局生成器',
-        //     render: <LayoutCreator></LayoutCreator>
-        // }
         ]
-        return (<Tabs style={style} tabPosition="left">
-            {_.map(tabs, tab => <TabPane style={style} tab={tab.name}
-                                         key={tab.name}>{tab.render}</TabPane>)}
-        </Tabs>);
+        return <SeconderyMenu data={data}></SeconderyMenu>
+
 
     }
 }

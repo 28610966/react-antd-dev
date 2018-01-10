@@ -2,8 +2,8 @@
   "App": [
     {
       "id": 1,
-      "appName": "预警中心",
-      "logo": "exclamation-circle"
+      "appName": "Devops",
+      "logo": "laptop"
     }
   ],
   "Menu": [
@@ -941,7 +941,7 @@
       "id": 1502874285596,
       "name": "王斌",
       "en_name": "wangbin",
-      "org_id": 1502874277609,
+      "org_id": 1502874297019,
       "role_id": [
         1502944305212,
         1502944316439,
@@ -956,6 +956,27 @@
         1502944305212
       ],
       "age": 24
+    },
+    {
+      "id": 1515491254723,
+      "name": "4",
+      "en_name": "4",
+      "org_id": 1502874277609,
+      "age": 4,
+      "right": [
+        1502944316439
+      ]
+    },
+    {
+      "id": 1515491271836,
+      "name": "5",
+      "en_name": "5",
+      "org_id": 1502874277609,
+      "age": 5,
+      "right": [
+        1502944336382,
+        1502944344003
+      ]
     }
   ],
   "Right": [
@@ -1114,7 +1135,7 @@
     {
       "id": 1502970092240,
       "name": "租户三",
-      "type": 1502969924694
+      "type": 1503041374834
     }
   ],
   "Dict": [
@@ -1166,22 +1187,6 @@
   ],
   "ExternalPage": [
     {
-      "id": 1503039451085,
-      "name": "Kibana",
-      "url": "http://10.15.15.62:5601/app/kibana#/discover",
-      "offsetLeft": -184,
-      "offsetTop": 0,
-      "order": 2
-    },
-    {
-      "id": 1503039454956,
-      "name": "Grafana",
-      "url": "http://10.15.15.60:3002/dashboard/db/node-exporter-single-server?orgId=1",
-      "offsetLeft": 0,
-      "offsetTop": 0,
-      "order": 3
-    },
-    {
       "id": 1503045156035,
       "name": "淘宝",
       "url": "http://www.taobao.com",
@@ -1201,7 +1206,7 @@
       "id": 1503045216058,
       "name": "Antd",
       "url": "https://ant.design/docs/react/introduce-cn",
-      "offsetLeft": -50,
+      "offsetLeft": 0,
       "offsetTop": 0,
       "order": 1
     }

@@ -4,12 +4,11 @@ import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import {Menu, Icon, Spin} from 'antd';
 import {MenuAction} from '@/actions';
-import ReactUtil from '@/util/ReactUtil';
 import menus from '@/menus';
 const SubMenu = Menu.SubMenu;
 const MenuItem = Menu.Item;
 
-class LeftMenu extends React.Component {
+class PrimaryMenu extends React.Component {
     propTypes = {
         menu: React.PropTypes.instanceOf(Object),
         role: React.PropTypes.instanceOf(Object),
@@ -18,13 +17,6 @@ class LeftMenu extends React.Component {
     componentWillMount() {
         // ReactUtil(this).action('Menu.list',{current:1,pageSize:1000});
     }
-
-    shouldComponentUpdate(nextProps){
-        // if(_.get(nextProps,'Menu.list.data',null) === null)
-        //     return false;
-        return true;
-    }
-
     render() {
 
         //静态菜单
@@ -83,4 +75,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(LeftMenu);
+export default connect(mapStateToProps)(PrimaryMenu);

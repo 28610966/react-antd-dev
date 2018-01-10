@@ -127,7 +127,7 @@ class ExternalPage extends Component {
             {
                 dataIndex: 'url',
                 title: '地址',
-                width: '10%',
+                width: '30%',
                  sorter: true,
                  render: (v, e) => {
                     let vv = v;

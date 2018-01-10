@@ -21,7 +21,7 @@ const fileAsync = require('lowdb/lib/storages/file-async')
 let low = require('lowdb');
 let _ = require('lodash');
 
-let db = low('mock/db_yj.json', {
+let db = low('mock/db.json', {
     storage: fileAsync
 })
 

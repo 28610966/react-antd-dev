@@ -3,11 +3,9 @@
  */
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {Tabs} from 'antd';
 import  Dict from './Dict';
-import  GrafanaSetting from '../grafana/GrafanaSetting';
+import SeconderyMenu from '../../frame/SeconderyMenu';
 import  ExternalPage from './ExternalPage';
-const TabPane =Tabs.TabPane;
 
 class System extends Component {
 
@@ -23,15 +21,16 @@ class System extends Component {
 
     //主体渲染入口，不要在render里面修改state。
     render() {
-        const style = {
-            height: '100%'
-        }
-        return (
-        <Tabs style={style} defaultActiveKey={'tab_dict'} tabPosition="left">
-            <TabPane style={style} tab={'字典'} key="tab_dict"><Dict></Dict></TabPane>
-            <TabPane style={style} tab={'外部页面'} key="tab_externalpage"><ExternalPage></ExternalPage></TabPane>
-        </Tabs>
-        );
+        const data = [{
+            tab: '字典',
+            key: 'tab_dict',
+            component: <Dict></Dict>
+        },{
+            tab: '外部页面',
+            key: 'tab_externalpage',
+            component: <ExternalPage></ExternalPage>
+        },]
+        return <SeconderyMenu data={data}></SeconderyMenu>
     }
 
 }

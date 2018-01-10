@@ -25,7 +25,7 @@ class Notice extends CrudComponent {
         this.FormCompopent = NoticeForm;
     }
 
-    willMount(){
+    willMount() {
         ReactUtil(this).action('Dict.list');
     }
 
@@ -104,7 +104,7 @@ class Notice extends CrudComponent {
 }
 
 class NoticeForm extends FormComponent {
-    createFields(){
+    createFields() {
         const dict = _.get(this.props, 'dict');
         return [
             {

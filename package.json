@@ -2,7 +2,7 @@
   "name": "wp3",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:8000",
+  "proxy": "http://localhost:8081",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.22.1",
@@ -104,7 +104,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "antd": "^2.12.7",
+    "antd": "^3.1.1",
     "echarts-for-react": "^1.4.4",
     "echarts-liquidfill": "^1.0.5",
     "intl-messageformat": "^2.1.0",

@@ -4,7 +4,7 @@ import {Menu, Dropdown, Icon, Layout, Breadcrumb, Row, Col, Badge, Tooltip, Back
 import {Link} from 'react-router';
 import screenfull from 'screenfull';
 import ReactUtil from '../../util/ReactUtil';
-import LeftMenu from './LeftMenu';
+import PrimaryMenu from './PrimaryMenu';
 import Login from '../pages/Login';
 import _ from 'lodash';
 import store from 'store';
@@ -107,7 +107,7 @@ class Frame extends React.Component {
                                                          style={{marginRight: '5px'}}/>{title}</span>
                         </Link>
                     </div>
-                    <LeftMenu {...this.props} role={this.state.role} collapsed={this.state.collapsed}></LeftMenu>
+                    <PrimaryMenu {...this.props} role={this.state.role} collapsed={this.state.collapsed}></PrimaryMenu>
                 </Sider>
                 <Layout>
                     <Header style={{background: '#fff', padding: 0}}>
@@ -209,7 +209,7 @@ class Frame extends React.Component {
     renderBreadcrumb(children) {
         if (!!children) {
             let {routes = []} = children.props;
-            return (<Breadcrumb separator={'>'} style={{marginLeft: '10px'}}>
+            return (<Breadcrumb separator={'>'} style={{marginLeft: '10px',marginTop:'10px'}}>
                 {_.chain(routes).filter(r => !!r.breadcrumbName).map(r => {
                     return <Breadcrumb.Item key={`Breadcrubmb:${r.path}`}>
                         <Link to={r.path}>

@@ -174,7 +174,7 @@ class User extends Component {
             {
                 dataIndex: 'right',
                 title: '角色',
-                width: '10%',
+                width: '30%',
                  sorter: true,
                  render: (v, e) => {
                     let vv = v;

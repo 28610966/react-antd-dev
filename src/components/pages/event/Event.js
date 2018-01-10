@@ -1,6 +1,6 @@
 /**
  *  auto create grid component
- *  author binwang.local date 2017-08-22
+ *  author binwang.local date 2018-01-09
  */
 
 import React, {Component, PropTypes} from 'react';
